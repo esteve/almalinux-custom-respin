@@ -8,6 +8,6 @@ set -xeuo pipefail
 # dnf install -y 'dnf-command(config-manager)'
 # dnf config-manager --set-enabled crb
 dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
-dnf install tailscale
+dnf install --assumeyes tailscale
 
 systemctl enable tailscaled
