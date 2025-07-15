@@ -7,5 +7,7 @@ set -xeuo pipefail
 # Examples:
 # dnf install -y 'dnf-command(config-manager)'
 # dnf config-manager --set-enabled crb
+sudo dnf config-manager --add-repo https://pkgs.tailscale.com/stable/rhel/10/tailscale.repo
+sudo dnf install tailscale
 
-echo "Hello, Atomic AlmaLinux respin world!."
+sudo systemctl enable tailscaled
